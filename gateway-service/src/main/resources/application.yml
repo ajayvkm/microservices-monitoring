@@ -1,0 +1,59 @@
+server:
+  port: ${PORT:8762}
+
+spring:
+  application:
+    name: gateway-service
+#  logstash:
+#    server: logstash
+#    port: 5000
+#  zipkin:
+#    base-url: ${ZIPKIN_URL:http://zipkin:9411}/
+  cloud:
+    gateway:
+      routes:
+        - id: store-service
+          uri: lb://STORE-SERVICE
+          predicates:
+            - Path=/store/**
+        - id: account-service
+          uri: lb://ACCOUNT-SERVICE
+          predicates:
+            - Path=/account/**
+        - id: order-service
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/order/**
+        - id: product-service
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/product/**
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#
+#  metrics:
+#    distribution:
+#      percentiles-histogram.http.server.requests: false
+#      percentiles.http.server.requests: 0.5, 0.9, 0.95, 0.99, 0.999
+#      sla.http.server.requests: 500ms, 2000ms
+
+eureka:
+  instance:
+    prefer-ip-address: false
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://discovery:8761}/eureka
+
+# Increase the Hystrix timeout to 60s (globally)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000

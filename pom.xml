@@ -32,7 +32,8 @@
 		<module>account-service</module>
 		<module>product-service</module>
 		<module>order-service</module>
-	</modules>
+        <module>gateway-service</module>
+    </modules>
 
 	<dependencies>
 		<dependency>
@@ -67,6 +68,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>

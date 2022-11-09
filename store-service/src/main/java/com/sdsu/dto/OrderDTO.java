@@ -1,2 +1,14 @@
-package com.sdsu.dto;public class OrderDTO {
+package com.sdsu.dto;
+
+import lombok.Data;
+
+@Data
+public class OrderDTO {
+
+    private final Integer id;
+    private final Integer count;
+    private final Double price;
+    private final Double discountedPrice;
+    private final String accountName;
+    private final String productName;
 }
