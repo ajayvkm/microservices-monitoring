@@ -65,16 +65,16 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-            <version>3.0.0</version>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>2.1.2</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>store-service</finalName>
+        <finalName>product-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

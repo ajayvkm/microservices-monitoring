@@ -1,4 +1,4 @@
-package com.sdsu.model;
+package com.sdsu.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,7 +16,6 @@ import java.util.Date;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "product")
 public class Product {
@@ -38,4 +37,11 @@ public class Product {
 
     @Column(name = "createdBy")
     private String createdBy;
+
+    public Product(String name, Double price, Date createdDate, String createdBy) {
+        this.name = name;
+        this.price = price;
+        this.createdDate = createdDate;
+        this.createdBy = createdBy;
+    }
 }
