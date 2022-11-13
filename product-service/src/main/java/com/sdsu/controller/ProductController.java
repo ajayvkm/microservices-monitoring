@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,13 +30,14 @@ public class ProductController {
         return ResponseEntity.ok("Welcome to product service !");
     }
 
+    @Autowired
     private final ProductRepository repository;
 
     @GetMapping("/{id}")
     @ApiOperation(value = "Returns unsecured test data from backend")
     public ResponseEntity<Product> get(@PathVariable("id") Integer id)
     {
-        final var product = repository.findById(id).get();
+        Product product = repository.findById(id).orElse(null);
         log.info("Product {} detail fetched {}", id, product);
         return ResponseEntity.ok(product);
     }
@@ -44,7 +46,7 @@ public class ProductController {
     @ApiOperation(value = "Get All The Products")
     public ResponseEntity<Collection<Product>> getAll()
     {
-        final Collection<Product> products = repository.findAll().get();
+        final Collection<Product> products = repository.findAll().orElse(null);
         log.info("Executing fetching all products {}", products);
         return ResponseEntity.ok(products);
     }
