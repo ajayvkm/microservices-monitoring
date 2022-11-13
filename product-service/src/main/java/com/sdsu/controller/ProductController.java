@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collection;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -44,10 +44,10 @@ public class ProductController {
 
     @GetMapping()
     @ApiOperation(value = "Get All The Products")
-    public ResponseEntity<Collection<Product>> getAll()
+    public ResponseEntity<List<Product>> getAll()
     {
-        final Collection<Product> products = repository.findAll().orElse(null);
-        log.info("Executing fetching all products {}", products);
-        return ResponseEntity.ok(products);
+        java.util.List<Product> allProducts = repository.findAll();
+        log.info("Executing fetching all products {}", allProducts);
+        return ResponseEntity.ok(allProducts);
     }
 }

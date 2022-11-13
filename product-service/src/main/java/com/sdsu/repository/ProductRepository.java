@@ -1,15 +1,15 @@
 package com.sdsu.repository;
 
-import com.sdsu.model.Product;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
-@Repository
-public class ProductRepository implements JpaRepository<Product, Integer> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.sdsu.model.Product;
+
+import feign.Param;
+
+public interface ProductRepository extends JpaRepository<Product, Integer> {
     /*private final static Map<Integer, Product> products = new HashMap<>();
 
     static {
@@ -19,7 +19,7 @@ public class ProductRepository implements JpaRepository<Product, Integer> {
         products.put(4, new Product(4, "sırt çantası", 50D));
     }*/
 
-    Optional<Product> findById(Integer id);
+    Optional<Product> findById(@Param("id") Integer id);
 
-    Optional<Collection<Product>> findAll();
+    List<Product> findAll();
 }
