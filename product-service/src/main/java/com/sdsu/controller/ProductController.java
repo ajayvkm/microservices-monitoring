@@ -3,11 +3,13 @@ package com.sdsu.controller;
 import com.sdsu.model.dto.ProductDto;
 import com.sdsu.model.entity.Product;
 import com.sdsu.repository.ProductRepository;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,7 +29,7 @@ import java.util.Optional;
 public class ProductController {
 
     @GetMapping("/")
-    //@ApiOperation(value = "welcome")
+    @Operation(summary = "Welcome API.")
     public ResponseEntity<String> welcome() {
         return ResponseEntity.ok("Welcome to product service !");
     }
@@ -36,7 +38,7 @@ public class ProductController {
     private final ProductRepository repository;
 
     @GetMapping("/{id}")
-    //@ApiOperation(value = "Returns unsecured test data from backend")
+    @Operation(summary = "Find product by product id.")
     public ResponseEntity<Product> get(@PathVariable("id") Integer id)
     {
         try {
@@ -55,7 +57,7 @@ public class ProductController {
     }
 
     @GetMapping("/all")
-    //@ApiOperation(value = "Get All The Products")
+    @Operation(summary = "Get All The Products")
     public ResponseEntity<List<Product>> getAll()
     {
         try {
@@ -73,6 +75,7 @@ public class ProductController {
     }
 
     @PostMapping("/add")
+    @Operation(summary = "Use this api to add new product.")
     public ResponseEntity<Product> addNewProduct(@RequestBody ProductDto product)
     {
         try {
@@ -86,7 +89,8 @@ public class ProductController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Product> updateTutorial(@PathVariable("id") Integer id, @RequestBody ProductDto product) {
+    @Operation(summary = "Use this api to update any product.")
+    public ResponseEntity<Product> updateProduct(@PathVariable("id") Integer id, @RequestBody ProductDto product) {
         Optional<Product> productData = repository.findById(id);
 
         if (productData.isPresent()) {
@@ -100,6 +104,28 @@ public class ProductController {
         } else {
             log.error("Error occurred while updating the product {} {}", product.getId(), product.getName());
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @DeleteMapping("/delete/{id}")
+    @Operation(summary = "Use this api to delete any single product.")
+    public ResponseEntity<HttpStatus> deleteProduct(@PathVariable("id") Integer id) {
+        try {
+            repository.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @DeleteMapping("/delete-all")
+    @Operation(summary = "Use this api to delete all product.")
+    public ResponseEntity<HttpStatus> deleteAllProducts() {
+        try {
+            repository.deleteAll();
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
