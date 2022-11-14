@@ -36,7 +36,7 @@ public class OrderServiceClient {
     //@GetMapping(value = "/order/api/v1/orders")
     public List<Order> findAll() {
         List<Order> orderList = null;
-        String url = baseUrl + "api/v1/orders";
+        String url = baseUrl + "api/v1/orders/all";
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
         headers.set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);

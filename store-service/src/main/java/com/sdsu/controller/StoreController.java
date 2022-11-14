@@ -60,10 +60,10 @@ public class StoreController {
         orders.forEach(o->{
             orderDTOList.add(new OrderDTO(
                     o.getId(),
-                    o.getCount(),
+                    o.getQuantity(),
                     o.getPrice(),
                     o.getDiscountedPrice(),
-                    accounts.get(o.getAccountId()).getFullname(),
+                    accounts.get(o.getAccountId()).getFullName(),
                     products.get(o.getProductId()).getName()
             ));
         });

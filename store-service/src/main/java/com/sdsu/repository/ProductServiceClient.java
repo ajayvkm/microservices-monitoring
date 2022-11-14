@@ -35,7 +35,7 @@ public class ProductServiceClient {
 
     public List<Product> findAll() {
         List<Product> productList = null;
-        String url = baseUrl + "api/v1/products";
+        String url = baseUrl + "api/v1/products/all";
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
         headers.set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);

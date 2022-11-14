@@ -36,7 +36,7 @@ public class AccountServiceClient {
 
     List<Account> findAll() {
         List<Account> accountList = null;
-        String url = baseUrl + "api/v1/accounts";
+        String url = baseUrl + "api/v1/accounts/all";
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
         headers.set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);

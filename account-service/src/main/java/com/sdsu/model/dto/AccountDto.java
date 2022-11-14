@@ -1,14 +1,13 @@
-package com.sdsu.model;
+package com.sdsu.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Account {
-    private Integer id;
+@NoArgsConstructor
+public class AccountDto {
     private String fullName;
     private String email;
 }
