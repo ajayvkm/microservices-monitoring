@@ -21,8 +21,8 @@ public class OpenApiConfiguration {
 
     private Info getInfo() {
         return new Info()
-                .title("Order Service")
-                .description("San Diego State University academic project - Order Service")
+                .title("Product Service")
+                .description("San Diego State University Academic project - Product Service")
                 .version("v1.0.0")
                 .license(getLicense());
     }

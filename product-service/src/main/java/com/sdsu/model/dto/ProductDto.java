@@ -10,7 +10,6 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProductDto {
-    private Integer id;
     private String name;
     private Double price;
     private Date createdDate;

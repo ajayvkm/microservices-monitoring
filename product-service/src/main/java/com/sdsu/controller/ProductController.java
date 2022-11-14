@@ -102,7 +102,7 @@ public class ProductController {
             log.info("Product updated successfully to the database {}", _product.getId());
             return new ResponseEntity<>(savedProduct, HttpStatus.OK);
         } else {
-            log.error("Error occurred while updating the product {} {}", product.getId(), product.getName());
+            log.error("Error occurred while updating the product {} {}", id, product.getName());
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
@@ -112,8 +112,10 @@ public class ProductController {
     public ResponseEntity<HttpStatus> deleteProduct(@PathVariable("id") Integer id) {
         try {
             repository.deleteById(id);
+            log.info("Product deleted successfully from the database {}", id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
+            log.info("Order failed to delete from the database {}", id, e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

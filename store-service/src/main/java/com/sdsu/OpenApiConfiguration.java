@@ -21,8 +21,8 @@ public class OpenApiConfiguration {
 
     private Info getInfo() {
         return new Info()
-                .title("Order Service")
-                .description("San Diego State University academic project - Order Service")
+                .title("Store Service")
+                .description("San Diego State University academic project - Store Service")
                 .version("v1.0.0")
                 .license(getLicense());
     }
@@ -32,6 +32,4 @@ public class OpenApiConfiguration {
                 .name("Ajay Vishwakarma")
                 .url("https://sdsu.edu/");
     }
-
-
 }

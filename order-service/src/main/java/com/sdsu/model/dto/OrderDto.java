@@ -1,23 +1,16 @@
-package com.sdsu.model;
+package com.sdsu.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Order {
-
-    private Integer id;
+public class OrderDto {
     private Integer productId;
     private Integer accountId;
-    private Integer count;
-    private Double price;
+    private Integer quantity;
+    private Double totalPrice;
     private Double discountedPrice;
-/*    private Date createdDate;
-    private String createdBy;*/
-
 }
