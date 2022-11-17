@@ -25,7 +25,7 @@ public class ProductServiceClient {
     @Autowired
     RestTemplate restTemplate;
 
-    String baseUrl = "http://localhost:2223/product/";
+    String baseUrl = "http://product-service/product/";
 
     public Product findById(Integer productId) {
         ResponseEntity<Product> response = restTemplate.getForEntity(baseUrl+"api/v1/products/"+productId, Product.class);

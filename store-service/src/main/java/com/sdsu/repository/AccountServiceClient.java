@@ -23,7 +23,7 @@ import static java.util.stream.Collectors.toCollection;
 @Component
 public class AccountServiceClient {
 
-    String baseUrl = "http://localhost:2225/account/";
+    String baseUrl = "http://account-service/account/";
 
     @Autowired
     RestTemplate restTemplate;

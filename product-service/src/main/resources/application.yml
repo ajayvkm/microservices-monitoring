@@ -1,5 +1,6 @@
 server:
-  port: ${PORT:2223}
+  #port: ${PORT:2223}
+  port: ${PORT:8090}
   servlet:
     context-path: /product
 
@@ -48,12 +49,12 @@ spring:
 
 eureka:
   instance:
-    prefer-ip-address: true
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    serviceUrl:
-      defaultZone: ${DISCOVER_URL:http://discovery:8761}/eureka/
+    prefer-ip-address: false
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: false
+#    serviceUrl:
+#      defaultZone: http://discovery:8761/eureka/
 
 ribbon:
   eureka:

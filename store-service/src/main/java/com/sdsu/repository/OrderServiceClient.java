@@ -27,7 +27,7 @@ public class OrderServiceClient {
     @Autowired
     RestTemplate restTemplate;
 
-    String baseUrl = "http://localhost:2224/order/";
+    String baseUrl = "http://order-service/order/";
 
     public Order findById(Integer orderId) {
         return null;
