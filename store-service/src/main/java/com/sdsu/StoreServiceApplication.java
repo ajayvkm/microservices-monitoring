@@ -14,16 +14,10 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class StoreServiceApplication extends SpringBootServletInitializer {
+public class StoreServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(StoreServiceApplication.class, args);
     }
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(StoreServiceApplication.class);
-    }
-
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {

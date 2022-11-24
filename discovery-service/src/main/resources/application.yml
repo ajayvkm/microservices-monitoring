@@ -10,6 +10,10 @@ eureka:
   server:
     enableSelfPreservation: false
 
+#spring:
+#  devtools:
+#    add-properties: false
+
 management:
   endpoints:
     web:

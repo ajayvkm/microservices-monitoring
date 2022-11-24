@@ -1,6 +1,6 @@
 server:
-  #port: ${PORT:2225}
-  port: ${PORT:8090}
+  port: ${PORT:2225}
+  #port: ${PORT:8090}
   servlet:
     context-path: /account
 
@@ -40,12 +40,6 @@ spring:
     url: 'jdbc:mysql://${db.host:localhost}:${db.port:3306}/store_ms_db?autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC'
     username: root
     password: adminadmin
-#    database-platform: org.hibernate.dialect.MySQL5Dialect
-#    initialize: false
-#    initialSize: 0
-#    timeBetweenEvictionRunsMillis: 5000
-#    minEvictableIdleTimeMillis: 5000
-#    minIdle: 0
 
 eureka:
   instance:

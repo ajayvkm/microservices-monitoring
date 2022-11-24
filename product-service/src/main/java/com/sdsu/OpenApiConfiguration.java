@@ -32,6 +32,4 @@ public class OpenApiConfiguration {
                 .name("Ajay Vishwakarma")
                 .url("https://sdsu.edu/");
     }
-
-
 }

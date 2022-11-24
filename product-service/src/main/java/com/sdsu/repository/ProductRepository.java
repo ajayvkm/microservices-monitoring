@@ -1,3 +1,5 @@
+
+
 package com.sdsu.repository;
 
 import java.util.List;
@@ -11,7 +13,6 @@ import feign.Param;
 
 public interface ProductRepository extends JpaRepository<Product, Integer> {
     /*private final static Map<Integer, ProductDto> products = new HashMap<>();
-
     static {
         products.put(1, new ProductDto(1, "5 saatlik şarj aleti", 100D));
         products.put(2, new ProductDto(2, "traş makinası", 5D));
