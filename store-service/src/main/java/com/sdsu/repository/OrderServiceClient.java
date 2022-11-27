@@ -1,6 +1,7 @@
 package com.sdsu.repository;
 
 import com.sdsu.model.Order;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
@@ -9,8 +10,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -22,6 +21,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toCollection;
 
 @Component
+@Slf4j
 public class OrderServiceClient {
 
     @Autowired
@@ -53,7 +53,26 @@ public class OrderServiceClient {
             orderList = accountCollection.stream().collect(toCollection(ArrayList::new));
         } catch (Exception e) {
             e.printStackTrace();
+            log.error(e.getMessage());
         }
         return orderList;
+    }
+
+    public ResponseEntity<Order> placeOrder(final Order order) {
+        String url = baseUrl + "api/v1/orders/add";
+        HttpHeaders headers = new HttpHeaders();
+        headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
+        headers.set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
+
+        HttpEntity<?> requestEntity = new HttpEntity<>(order, headers);
+        URI uri = UriComponentsBuilder.fromHttpUrl(url).build().toUri();
+
+        try {
+            ResponseEntity<Order> placedOrder = restTemplate.exchange(uri, HttpMethod.POST, requestEntity, Order.class);
+            return placedOrder;
+        } catch (Exception e) {
+            log.error("Failed to place order {}", e.getMessage());
+        }
+        return null;
     }
 }

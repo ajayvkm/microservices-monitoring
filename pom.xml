@@ -34,6 +34,7 @@
 		<module>order-service</module>
 		<module>gateway-service</module>
 		<module>discovery-service</module>
+		<module>hystrix-dashboard-service</module>
 	</modules>
 
 	<dependencies>
