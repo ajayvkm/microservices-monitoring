@@ -4,14 +4,8 @@ server:
 spring:
   application:
     name: hystrix-dashboard-service
-
-eureka:
-  instance:
-    prefer-ip-address: false
-#  client:
-#    registerWithEureka: false
-#    serviceUrl:
-#      defaultZone: ${DISCOVERY_URL:http://discovery:8761}/eureka
+  config:
+    import: configserver:http://localhost:9196
 
 management:
   endpoints:
