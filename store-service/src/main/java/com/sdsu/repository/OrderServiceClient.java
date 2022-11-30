@@ -33,7 +33,6 @@ public class OrderServiceClient {
         return null;
     }
 
-    //@GetMapping(value = "/order/api/v1/orders")
     public List<Order> findAll() {
         List<Order> orderList = null;
         String url = baseUrl + "api/v1/orders/all";
