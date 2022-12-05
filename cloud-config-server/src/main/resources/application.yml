@@ -6,6 +6,7 @@ spring:
       server:
         git:
           uri: https://github.com/ajayvkm/cloud-config-server
+          default-label: main
 
 server:
   port: 9196

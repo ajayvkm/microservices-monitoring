@@ -1,4 +1,4 @@
-package com.sdsu;
+/*package com.sdsu;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,4 +10,4 @@ class CloudConfigServerApplicationTests {
 	void contextLoads() {
 	}
 
-}
+}*/

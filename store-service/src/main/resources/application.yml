@@ -22,12 +22,6 @@ spring:
 #  zipkin:
 #    base-url: ${ZIPKIN_URL:http://zipkin:9411}/
 
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#
 #  metrics:
 #    distribution:
 #      percentiles-histogram.http.server.requests: false

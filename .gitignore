@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+cloud-config-server/.mvn/wrapper/maven-wrapper.jar
+cloud-config-server/.mvn/wrapper/maven-wrapper.properties

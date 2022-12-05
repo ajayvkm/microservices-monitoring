@@ -3,11 +3,12 @@ package com.sdsu.controller;
 import com.sdsu.model.dto.ProductDto;
 import com.sdsu.model.entity.Product;
 import com.sdsu.repository.ProductRepository;
-
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -28,13 +29,17 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/v1/products")
 @RequiredArgsConstructor
+@RefreshScope
 @CrossOrigin(origins = "http://localhost:8762")
 public class ProductController {
+
+    @Value("${msg:Config Server is not working. Please check...}")
+    private String msg;
 
     @GetMapping("/")
     @Operation(summary = "Welcome API.")
     public ResponseEntity<String> welcome() {
-        return ResponseEntity.ok("Welcome to product service !");
+        return ResponseEntity.ok(this.msg);
     }
 
     @Autowired

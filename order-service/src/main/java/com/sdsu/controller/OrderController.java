@@ -4,10 +4,13 @@ import com.sdsu.model.dto.OrderDto;
 import com.sdsu.model.entity.Order;
 import com.sdsu.repository.OrderRepository;
 import io.swagger.v3.oas.annotations.Operation;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +28,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/v1/orders")
 @RequiredArgsConstructor
+@RefreshScope
+@CrossOrigin(origins = "http://localhost:8762")
 public class OrderController {
 
     private final OrderRepository repository;

@@ -10,9 +10,10 @@ import com.sdsu.repository.ProductServiceClient;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,11 +28,15 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/store")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:8762")
 public class StoreController {
+
+    @Value("${msg:Config Server is not working. Please check...}")
+    public String msg;
 
     @GetMapping("/")
     public ResponseEntity<String> welcome() {
-        return ResponseEntity.ok("Welcome to store service !");
+        return ResponseEntity.ok(this.msg);
     }
 
     private final ProductServiceClient productService;

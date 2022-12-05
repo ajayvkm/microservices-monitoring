@@ -1,10 +1,14 @@
 package com.sdsu.controller;
 
 
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-
+import com.sdsu.model.dto.AccountDto;
+import com.sdsu.model.entity.Account;
+import com.sdsu.repository.AccountRepository;
+import io.swagger.v3.oas.annotations.Operation;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,27 +21,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sdsu.model.dto.AccountDto;
-import com.sdsu.model.entity.Account;
-import com.sdsu.repository.AccountRepository;
-
-import io.swagger.v3.oas.annotations.Operation;
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @RestController
 @RequestMapping("/api/v1/accounts")
-@AllArgsConstructor
+@RequiredArgsConstructor
+@RefreshScope
 @CrossOrigin(origins = "http://localhost:8762")
 public class AccountController {
 
     private final AccountRepository repository;
 
+    @Value("${msg:Config Server is not working. Please check...}")
+    public String msg;
+
     @GetMapping("/")
     @Operation(summary = "Welcome API.")
     public ResponseEntity<String> welcome() {
-        return ResponseEntity.ok("Welcome to account service !");
+        return ResponseEntity.ok(this.msg);
     }
 
     @GetMapping("/{id}")
