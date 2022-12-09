@@ -1,36 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
     <springProperty scope="context" name="SPRING_APP_NAME" source="spring.application.name"/>
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <property name="LOG_PATH" value="/users/avishwaka1/sdsu-projects/sdsu-project/microservices-monitoring/logs"/>
+    <property name="CONSOLE_LOG_PATTERN" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [${SPRING_APP_NAME}][parentSpanId=%X{parentId}][traceId=%X{traceId}][spanId=%X{id}] [%t] %X{id} %c{1} - %msg%n"/>
+    <property name="FILE_LOG_PATTERN" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [${SPRING_APP_NAME}][parentSpanId=%X{parentId}][traceId=%X{traceId}][spanId=%X{id}] [%t] %X{id} %c{1} - %msg%n"/>
+
+    <appender name="CONSOLE_APPENDER" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS}[%thread][%5p][${SPRING_APP_NAME}][session-id=%X{session-id}][parentSpanId=%X{parentId}][traceId=%X{traceId}][spanId=%X{id}][spanExport=%X{shared}][%c{36}::%L::%M] -- %m%n</pattern>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <charset>utf8</charset>
         </encoder>
     </appender>
-    <appender name="SAVE-TO-FILE" class="ch.qos.logback.core.FileAppender">
-        <file>/users/avishwaka1/sdsu-projects/sdsu-project/microservices-monitoring/logs/micro-store-service.log
-        </file>
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS}[%thread][%5p][${SPRING_APP_NAME}][session-id=%X{session-id}][parentSpanId=%X{parentId}][traceId=%X{traceId}][spanId=%X{id}][spanExport=%X{shared}][%c{36}::%L::%M] -- %m%n</pattern>
+
+    <!--<appender name="ROLLING_TEXT_FILE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/micro-store-service-text.log</file>
+        <encoder>
+            <Pattern>${FILE_LOG_PATTERN}</Pattern>
         </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/micro-store-service-text.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+    </appender>-->
+
+    <appender name="ROLLING_JSON_FILE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/micro-store-service-json.log</file>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/micro-store-service-json.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
     </appender>
-    <logger name="com.sdsu" additivity="false" level="info">
-        <appender-ref ref="SAVE-TO-FILE"/>
-        <appender-ref ref="STDOUT"/>
-    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE_APPENDER"/>
+<!--        <appender-ref ref="ROLLING_TEXT_FILE_APPENDER"/>-->
+        <appender-ref ref="ROLLING_JSON_FILE_APPENDER"/>
+    </root>
 
     <logger name="com.sdsu" additivity="false" level="WARN">
-        <appender-ref ref="STDOUT"/>
-        <appender-ref ref="SAVE-TO-FILE"/>
+        <appender-ref ref="CONSOLE_APPENDER"/>
+        <appender-ref ref="ROLLING_JSON_FILE_APPENDER"/>
     </logger>
 
     <logger name="com.sdsu" additivity="false" level="ERROR">
-        <appender-ref ref="STDOUT"/>
-        <appender-ref ref="SAVE-TO-FILE"/>
+        <appender-ref ref="CONSOLE_APPENDER"/>
+        <appender-ref ref="ROLLING_JSON_FILE_APPENDER"/>
     </logger>
 
-
-    <root level="INFO">
-        <appender-ref ref="SAVE-TO-FILE"/>
-        <appender-ref ref="STDOUT"/>
-    </root>
 </configuration>

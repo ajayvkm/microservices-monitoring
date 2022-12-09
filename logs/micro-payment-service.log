@@ -1,0 +1,745 @@
+08-12-2022 22:39:09.059 [background-preinit][ INFO][payment-service][traceId=][spanId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.0.Final
+08-12-2022 22:39:09.121 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.c.config.ConfigDataLoader.logTo - Fetching config from server at : http://localhost:9196
+08-12-2022 22:39:09.122 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.c.config.ConfigDataLoader.logTo - Located environment: name=payment-service, profiles=[default], label=null, version=9c740b9eb42032b771ab60e46b3037a8f31755e7, state=null
+08-12-2022 22:39:09.126 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08-12-2022 22:39:09.126 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08-12-2022 22:39:10.460 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08-12-2022 22:39:10.685 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 213 ms. Found 1 JPA repository interfaces.
+08-12-2022 22:39:11.245 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=7e48dcf5-c28d-3fc7-ad68-8bd14dce9fc7
+08-12-2022 22:39:12.442 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 2226 (http)
+08-12-2022 22:39:12.455 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-2226"]
+08-12-2022 22:39:12.456 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-12-2022 22:39:12.456 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.46]
+08-12-2022 22:39:12.624 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.c.c.C.[.[localhost].[/payment].log - Initializing Spring embedded WebApplicationContext
+08-12-2022 22:39:12.625 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3498 ms
+08-12-2022 22:39:14.131 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-12-2022 22:39:14.431 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-12-2022 22:39:14.569 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-12-2022 22:39:14.670 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
+08-12-2022 22:39:14.920 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+08-12-2022 22:39:15.096 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-12-2022 22:39:15.926 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-12-2022 22:39:15.937 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-12-2022 22:39:16.997 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-12-2022 22:39:19.350 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.b.d.a.OptionalLiveReloadServer.startServer - Unable to start LiveReload server
+08-12-2022 22:39:19.404 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.discoveryClientOptionalArgs - Eureka HTTP Client uses Jersey
+08-12-2022 22:39:19.727 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.logWarning - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08-12-2022 22:39:19.845 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 16 endpoint(s) beneath base path '/actuator'
+08-12-2022 22:39:19.918 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+08-12-2022 22:39:20.054 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+08-12-2022 22:39:20.288 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using JSON encoding codec LegacyJacksonJson
+08-12-2022 22:39:20.289 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using JSON decoding codec LegacyJacksonJson
+08-12-2022 22:39:20.459 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using XML encoding codec XStreamXml
+08-12-2022 22:39:20.460 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using XML decoding codec XStreamXml
+08-12-2022 22:39:20.680 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 22:39:20.711 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+08-12-2022 22:39:20.711 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+08-12-2022 22:39:20.712 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+08-12-2022 22:39:20.712 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+08-12-2022 22:39:20.713 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+08-12-2022 22:39:20.713 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+08-12-2022 22:39:20.713 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+08-12-2022 22:39:20.869 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+08-12-2022 22:39:20.872 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+08-12-2022 22:39:20.875 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+08-12-2022 22:39:20.883 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1670567960880 with initial instances count: 2
+08-12-2022 22:39:20.895 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application PAYMENT-SERVICE with eureka with status UP
+08-12-2022 22:39:20.896 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1670567960896, current=UP, previous=STARTING]
+08-12-2022 22:39:20.898 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226: registering service...
+08-12-2022 22:39:20.901 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-2226"]
+08-12-2022 22:39:20.935 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 2226 (http) with context path '/payment'
+08-12-2022 22:39:20.936 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 2226
+08-12-2022 22:39:20.943 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - registration status: 204
+08-12-2022 22:42:39.283 [Thread-1][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application PAYMENT-SERVICE with eureka with status DOWN
+08-12-2022 22:42:39.284 [Thread-1][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1670568159284, current=DOWN, previous=UP]
+08-12-2022 22:42:39.284 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226: registering service...
+08-12-2022 22:42:39.301 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - registration status: 204
+08-12-2022 22:42:39.324 [Thread-1][ INFO][payment-service][traceId=][spanId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+08-12-2022 22:42:39.333 [Thread-1][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+08-12-2022 22:42:39.350 [Thread-1][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+08-12-2022 22:42:40.358 [Thread-1][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+08-12-2022 22:42:43.364 [Thread-1][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+08-12-2022 22:42:43.373 [Thread-1][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - deregister  status: 200
+08-12-2022 22:42:43.386 [Thread-1][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+08-12-2022 22:42:43.799 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.c.config.ConfigDataLoader.logTo - Fetching config from server at : http://localhost:9196
+08-12-2022 22:42:43.800 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.c.config.ConfigDataLoader.logTo - Located environment: name=payment-service, profiles=[default], label=null, version=9c740b9eb42032b771ab60e46b3037a8f31755e7, state=null
+08-12-2022 22:42:44.368 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08-12-2022 22:42:44.383 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interfaces.
+08-12-2022 22:42:44.539 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=7e48dcf5-c28d-3fc7-ad68-8bd14dce9fc7
+08-12-2022 22:42:44.755 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 2226 (http)
+08-12-2022 22:42:44.756 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-2226"]
+08-12-2022 22:42:44.757 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-12-2022 22:42:44.757 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.46]
+08-12-2022 22:42:44.789 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.c.c.C.[.[localhost].[/payment].log - Initializing Spring embedded WebApplicationContext
+08-12-2022 22:42:44.790 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 989 ms
+08-12-2022 22:42:45.448 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-2 - Starting...
+08-12-2022 22:42:45.472 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-2 - Start completed.
+08-12-2022 22:42:45.495 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-12-2022 22:42:45.503 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-12-2022 22:42:45.571 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-12-2022 22:42:45.572 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-12-2022 22:42:45.844 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-12-2022 22:42:46.564 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.b.d.a.OptionalLiveReloadServer.startServer - Unable to start LiveReload server
+08-12-2022 22:42:46.594 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.discoveryClientOptionalArgs - Eureka HTTP Client uses Jersey
+08-12-2022 22:42:46.714 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.logWarning - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08-12-2022 22:42:46.772 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 16 endpoint(s) beneath base path '/actuator'
+08-12-2022 22:42:46.802 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+08-12-2022 22:42:46.808 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+08-12-2022 22:42:46.820 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using JSON encoding codec LegacyJacksonJson
+08-12-2022 22:42:46.821 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using JSON decoding codec LegacyJacksonJson
+08-12-2022 22:42:46.821 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using XML encoding codec XStreamXml
+08-12-2022 22:42:46.821 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using XML decoding codec XStreamXml
+08-12-2022 22:42:46.916 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 22:42:46.918 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+08-12-2022 22:42:46.919 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+08-12-2022 22:42:46.919 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+08-12-2022 22:42:46.920 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+08-12-2022 22:42:46.920 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+08-12-2022 22:42:46.920 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+08-12-2022 22:42:46.921 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+08-12-2022 22:42:46.942 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+08-12-2022 22:42:46.944 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+08-12-2022 22:42:46.945 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+08-12-2022 22:42:46.947 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1670568166947 with initial instances count: 3
+08-12-2022 22:42:46.956 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application PAYMENT-SERVICE with eureka with status UP
+08-12-2022 22:42:46.957 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1670568166957, current=UP, previous=STARTING]
+08-12-2022 22:42:46.957 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226: registering service...
+08-12-2022 22:42:46.959 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-2226"]
+08-12-2022 22:42:46.963 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 2226 (http) with context path '/payment'
+08-12-2022 22:42:46.964 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 2226
+08-12-2022 22:42:46.966 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - registration status: 204
+08-12-2022 22:42:46.996 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+08-12-2022 22:42:52.274 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application PAYMENT-SERVICE with eureka with status DOWN
+08-12-2022 22:42:52.275 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1670568172275, current=DOWN, previous=UP]
+08-12-2022 22:42:52.275 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226: registering service...
+08-12-2022 22:42:52.282 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=java.net.ConnectException: Connection refused (Connection refused) stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:57)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 28 more
+
+08-12-2022 22:42:52.283 [DiscoveryClient-InstanceInfoReplicator-0][ WARN][payment-service][traceId=][spanId=] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+08-12-2022 22:42:52.285 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused (Connection refused) stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:57)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 29 more
+
+08-12-2022 22:42:52.285 [DiscoveryClient-InstanceInfoReplicator-0][ WARN][payment-service][traceId=][spanId=] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+08-12-2022 22:42:52.288 [DiscoveryClient-InstanceInfoReplicator-0][ WARN][payment-service][traceId=][spanId=] WARN  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+08-12-2022 22:42:52.289 [DiscoveryClient-InstanceInfoReplicator-0][ WARN][payment-service][traceId=][spanId=] WARN  c.n.discovery.InstanceInfoReplicator.run - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+08-12-2022 22:42:52.336 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+08-12-2022 22:42:52.338 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-2 - Shutdown initiated...
+08-12-2022 22:42:52.344 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-2 - Shutdown completed.
+08-12-2022 22:42:53.348 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+08-12-2022 22:42:56.352 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+08-12-2022 22:42:56.354 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused (Connection refused) stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:184)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:177)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:128)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:100)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 47 more
+
+08-12-2022 22:42:56.355 [SpringApplicationShutdownHook][ WARN][payment-service][traceId=][spanId=] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+08-12-2022 22:42:56.355 [SpringApplicationShutdownHook][ERROR][payment-service][traceId=][spanId=] ERROR c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:184)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:177)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:128)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:100)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+08-12-2022 22:42:56.365 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+08-12-2022 22:43:59.083 [background-preinit][ INFO][payment-service][traceId=][spanId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.0.Final
+08-12-2022 22:43:59.146 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.c.config.ConfigDataLoader.logTo - Fetching config from server at : http://localhost:9196
+08-12-2022 22:43:59.148 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.c.config.ConfigDataLoader.logTo - Located environment: name=payment-service, profiles=[default], label=null, version=9c740b9eb42032b771ab60e46b3037a8f31755e7, state=null
+08-12-2022 22:43:59.150 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08-12-2022 22:43:59.150 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08-12-2022 22:44:00.483 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08-12-2022 22:44:00.710 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 215 ms. Found 1 JPA repository interfaces.
+08-12-2022 22:44:01.266 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=7e48dcf5-c28d-3fc7-ad68-8bd14dce9fc7
+08-12-2022 22:44:02.487 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 2226 (http)
+08-12-2022 22:44:02.502 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-2226"]
+08-12-2022 22:44:02.503 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-12-2022 22:44:02.504 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.46]
+08-12-2022 22:44:02.685 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.c.c.C.[.[localhost].[/payment].log - Initializing Spring embedded WebApplicationContext
+08-12-2022 22:44:02.685 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3534 ms
+08-12-2022 22:44:04.218 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-12-2022 22:44:04.485 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-12-2022 22:44:04.617 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-12-2022 22:44:04.709 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
+08-12-2022 22:44:04.931 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+08-12-2022 22:44:05.123 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-12-2022 22:44:05.969 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-12-2022 22:44:05.980 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-12-2022 22:44:06.857 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-12-2022 22:44:08.750 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.b.d.a.OptionalLiveReloadServer.startServer - Unable to start LiveReload server
+08-12-2022 22:44:08.796 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.discoveryClientOptionalArgs - Eureka HTTP Client uses Jersey
+08-12-2022 22:44:09.021 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.logWarning - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08-12-2022 22:44:09.180 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 16 endpoint(s) beneath base path '/actuator'
+08-12-2022 22:44:09.273 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+08-12-2022 22:44:09.403 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+08-12-2022 22:44:09.639 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using JSON encoding codec LegacyJacksonJson
+08-12-2022 22:44:09.640 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using JSON decoding codec LegacyJacksonJson
+08-12-2022 22:44:09.815 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using XML encoding codec XStreamXml
+08-12-2022 22:44:09.816 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using XML decoding codec XStreamXml
+08-12-2022 22:44:10.051 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 22:44:10.077 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+08-12-2022 22:44:10.078 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+08-12-2022 22:44:10.078 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+08-12-2022 22:44:10.078 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+08-12-2022 22:44:10.079 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+08-12-2022 22:44:10.079 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+08-12-2022 22:44:10.079 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+08-12-2022 22:44:10.222 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+08-12-2022 22:44:10.226 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+08-12-2022 22:44:10.229 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+08-12-2022 22:44:10.235 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1670568250233 with initial instances count: 2
+08-12-2022 22:44:10.244 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application PAYMENT-SERVICE with eureka with status UP
+08-12-2022 22:44:10.245 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1670568250245, current=UP, previous=STARTING]
+08-12-2022 22:44:10.247 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226: registering service...
+08-12-2022 22:44:10.250 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-2226"]
+08-12-2022 22:44:10.286 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 2226 (http) with context path '/payment'
+08-12-2022 22:44:10.288 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 2226
+08-12-2022 22:44:10.290 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - registration status: 204
+08-12-2022 22:47:17.244 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application PAYMENT-SERVICE with eureka with status DOWN
+08-12-2022 22:47:17.258 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1670568437258, current=DOWN, previous=UP]
+08-12-2022 22:47:17.261 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226: registering service...
+08-12-2022 22:47:17.277 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - registration status: 204
+08-12-2022 22:47:17.399 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+08-12-2022 22:47:17.416 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+08-12-2022 22:47:17.437 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+08-12-2022 22:47:18.446 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+08-12-2022 22:47:21.456 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+08-12-2022 22:47:21.463 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - deregister  status: 200
+08-12-2022 22:47:21.486 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+08-12-2022 22:47:49.661 [background-preinit][ INFO][payment-service][traceId=][spanId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.0.Final
+08-12-2022 22:47:49.725 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.c.config.ConfigDataLoader.logTo - Fetching config from server at : http://localhost:9196
+08-12-2022 22:47:49.726 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.c.config.ConfigDataLoader.logTo - Located environment: name=payment-service, profiles=[default], label=null, version=9c740b9eb42032b771ab60e46b3037a8f31755e7, state=null
+08-12-2022 22:47:49.728 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08-12-2022 22:47:49.729 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08-12-2022 22:47:51.699 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08-12-2022 22:47:52.052 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 334 ms. Found 1 JPA repository interfaces.
+08-12-2022 22:47:53.100 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=7e48dcf5-c28d-3fc7-ad68-8bd14dce9fc7
+08-12-2022 22:47:55.078 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 2226 (http)
+08-12-2022 22:47:55.099 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-2226"]
+08-12-2022 22:47:55.100 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+08-12-2022 22:47:55.101 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.46]
+08-12-2022 22:47:55.392 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.c.c.C.[.[localhost].[/payment].log - Initializing Spring embedded WebApplicationContext
+08-12-2022 22:47:55.408 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 5678 ms
+08-12-2022 22:47:58.821 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+08-12-2022 22:47:59.459 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+08-12-2022 22:47:59.730 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-12-2022 22:47:59.875 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
+08-12-2022 22:48:00.249 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+08-12-2022 22:48:00.522 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-12-2022 22:48:02.078 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-12-2022 22:48:02.097 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-12-2022 22:48:04.235 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-12-2022 22:48:08.676 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.b.d.a.OptionalLiveReloadServer.startServer - Unable to start LiveReload server
+08-12-2022 22:48:08.785 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.discoveryClientOptionalArgs - Eureka HTTP Client uses Jersey
+08-12-2022 22:48:09.354 [restartedMain][ WARN][payment-service][traceId=][spanId=] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.logWarning - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08-12-2022 22:48:09.651 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 16 endpoint(s) beneath base path '/actuator'
+08-12-2022 22:48:09.837 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+08-12-2022 22:48:10.145 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+08-12-2022 22:48:10.804 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using JSON encoding codec LegacyJacksonJson
+08-12-2022 22:48:10.805 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using JSON decoding codec LegacyJacksonJson
+08-12-2022 22:48:11.162 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using XML encoding codec XStreamXml
+08-12-2022 22:48:11.163 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.p.DiscoveryJerseyProvider.<init> - Using XML decoding codec XStreamXml
+08-12-2022 22:48:11.917 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 22:48:11.964 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+08-12-2022 22:48:11.965 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+08-12-2022 22:48:11.966 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+08-12-2022 22:48:11.968 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+08-12-2022 22:48:11.968 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+08-12-2022 22:48:11.969 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+08-12-2022 22:48:11.969 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+08-12-2022 22:48:12.426 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+08-12-2022 22:48:12.432 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+08-12-2022 22:48:12.437 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+08-12-2022 22:48:12.460 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1670568492447 with initial instances count: 5
+08-12-2022 22:48:12.488 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application PAYMENT-SERVICE with eureka with status UP
+08-12-2022 22:48:12.490 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1670568492490, current=UP, previous=STARTING]
+08-12-2022 22:48:12.493 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226: registering service...
+08-12-2022 22:48:12.498 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-2226"]
+08-12-2022 22:48:12.546 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - registration status: 204
+08-12-2022 22:48:12.567 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 2226 (http) with context path '/payment'
+08-12-2022 22:48:12.570 [restartedMain][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 2226
+08-12-2022 22:53:11.976 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 22:58:11.986 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:03:12.051 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:06:02.518 [http-nio-2226-exec-1][ INFO][payment-service][traceId=][spanId=] INFO  o.a.c.c.C.[.[localhost].[/payment].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+08-12-2022 23:06:02.519 [http-nio-2226-exec-1][ INFO][payment-service][traceId=][spanId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+08-12-2022 23:06:02.590 [http-nio-2226-exec-1][ INFO][payment-service][traceId=][spanId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 69 ms
+08-12-2022 23:08:12.071 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:13:12.091 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:18:12.105 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:23:12.125 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:28:12.141 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:33:12.124 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:38:12.143 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:43:12.159 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:48:12.181 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:53:12.201 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+08-12-2022 23:58:12.130 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+09-12-2022 00:03:12.139 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+09-12-2022 00:08:12.152 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+09-12-2022 00:13:12.158 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+09-12-2022 00:18:12.170 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+09-12-2022 00:21:46.456 [http-nio-2226-exec-8][ INFO][payment-service][traceId=5937c3ff9ba15e4b][spanId=80157ebb623c9b02] INFO  o.s.api.AbstractOpenApiResource.getOpenApi - Init duration for springdoc-openapi is: 830 ms
+09-12-2022 00:23:12.186 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+09-12-2022 00:28:12.239 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+09-12-2022 00:33:12.254 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+09-12-2022 00:38:12.269 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+09-12-2022 00:43:12.288 [AsyncResolver-bootstrap-executor-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+09-12-2022 00:43:45.416 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application PAYMENT-SERVICE with eureka with status DOWN
+09-12-2022 00:43:45.419 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1670575425419, current=DOWN, previous=UP]
+09-12-2022 00:43:45.424 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226: registering service...
+09-12-2022 00:43:45.495 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=org.apache.http.NoHttpResponseException: localhost:8761 failed to respond stacktrace=com.sun.jersey.api.client.ClientHandlerException: org.apache.http.NoHttpResponseException: localhost:8761 failed to respond
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:57)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.http.NoHttpResponseException: localhost:8761 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 29 more
+
+09-12-2022 00:43:45.502 [DiscoveryClient-InstanceInfoReplicator-0][ WARN][payment-service][traceId=][spanId=] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: org.apache.http.NoHttpResponseException: localhost:8761 failed to respond
+09-12-2022 00:43:45.548 [DiscoveryClient-InstanceInfoReplicator-0][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused (Connection refused) stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:57)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 30 more
+
+09-12-2022 00:43:45.556 [DiscoveryClient-InstanceInfoReplicator-0][ WARN][payment-service][traceId=][spanId=] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+09-12-2022 00:43:45.597 [DiscoveryClient-InstanceInfoReplicator-0][ WARN][payment-service][traceId=][spanId=] WARN  c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+09-12-2022 00:43:45.602 [DiscoveryClient-InstanceInfoReplicator-0][ WARN][payment-service][traceId=][spanId=] WARN  c.n.discovery.InstanceInfoReplicator.run - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+09-12-2022 00:43:45.687 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+09-12-2022 00:43:45.798 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+09-12-2022 00:43:45.904 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+09-12-2022 00:43:47.022 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+09-12-2022 00:43:50.067 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+09-12-2022 00:43:50.091 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused (Connection refused) stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:184)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:177)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:128)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:100)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 47 more
+
+09-12-2022 00:43:50.092 [SpringApplicationShutdownHook][ WARN][payment-service][traceId=][spanId=] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+09-12-2022 00:43:50.093 [SpringApplicationShutdownHook][ERROR][payment-service][traceId=][spanId=] ERROR c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_PAYMENT-SERVICE/192.168.0.234:payment-service:2226 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:184)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:177)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:128)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:100)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+09-12-2022 00:43:50.133 [SpringApplicationShutdownHook][ INFO][payment-service][traceId=][spanId=] INFO  c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient

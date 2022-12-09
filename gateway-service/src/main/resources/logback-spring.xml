@@ -2,8 +2,8 @@
 <configuration>
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
     <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
-    <property name="LOG_PATH" value="/users/avishwaka1/sdsu-projects/sdsu-project/microservices-monitoring/logs"/>
     <springProperty scope="context" name="SPRING_APP_NAME" source="spring.application.name"/>
+    <property name="LOG_PATH" value="/users/avishwaka1/sdsu-projects/sdsu-project/microservices-monitoring/logs"/>
     <property name="CONSOLE_LOG_PATTERN" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [${SPRING_APP_NAME}][parentSpanId=%X{parentId}][traceId=%X{traceId}][spanId=%X{id}] [%t] %X{id} %c{1} - %msg%n"/>
     <property name="FILE_LOG_PATTERN" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [${SPRING_APP_NAME}][parentSpanId=%X{parentId}][traceId=%X{traceId}][spanId=%X{id}] [%t] %X{id} %c{1} - %msg%n"/>
 
@@ -15,12 +15,12 @@
     </appender>
 
     <!--<appender name="ROLLING_TEXT_FILE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_PATH}/micro-product-service-text.log</file>
+        <file>${LOG_PATH}/micro-gateway-service-text.log</file>
         <encoder>
             <Pattern>${FILE_LOG_PATTERN}</Pattern>
         </encoder>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_PATH}/micro-product-service-text.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}/micro-gateway-service-text.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>100MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
@@ -29,10 +29,10 @@
     </appender>-->
 
     <appender name="ROLLING_JSON_FILE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_PATH}/micro-product-service-json.log</file>
+        <file>${LOG_PATH}/micro-gateway-service-json.log</file>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_PATH}/micro-product-service-json.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}/micro-gateway-service-json.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>100MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>

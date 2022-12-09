@@ -5165,3 +5165,256 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
 	... 36 common frames omitted
+08-12-2022 22:44:51.083[background-preinit][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.h.validator.internal.util.Version::21::<clinit>] -- HV000001: Hibernate Validator 6.2.0.Final
+08-12-2022 22:44:51.160[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.b.c.config.ConfigDataLoader::255::logTo] -- Fetching config from server at : http://localhost:9196
+08-12-2022 22:44:51.162[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.b.c.config.ConfigDataLoader::255::logTo] -- Located environment: name=account-service, profiles=[production], label=null, version=9c740b9eb42032b771ab60e46b3037a8f31755e7, state=null
+08-12-2022 22:44:51.164[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor::255::logTo] -- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08-12-2022 22:44:51.165[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor::255::logTo] -- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08-12-2022 22:44:52.553[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.d.r.c.RepositoryConfigurationDelegate::132::registerRepositoriesIn] -- Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08-12-2022 22:44:52.813[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.d.r.c.RepositoryConfigurationDelegate::201::registerRepositoriesIn] -- Finished Spring Data repository scanning in 246 ms. Found 1 JPA repository interfaces.
+08-12-2022 22:44:53.332[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.cloud.context.scope.GenericScope::283::setSerializationId] -- BeanFactory id=59b02a9b-a5ca-3197-a5c6-e9e3114cf52a
+08-12-2022 22:44:54.568[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.b.w.e.tomcat.TomcatWebServer::108::initialize] -- Tomcat initialized with port(s): 2225 (http)
+08-12-2022 22:44:54.582[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.a.coyote.http11.Http11NioProtocol::173::log] -- Initializing ProtocolHandler ["http-nio-2225"]
+08-12-2022 22:44:54.583[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.a.catalina.core.StandardService::173::log] -- Starting service [Tomcat]
+08-12-2022 22:44:54.583[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.a.catalina.core.StandardEngine::173::log] -- Starting Servlet engine: [Apache Tomcat/9.0.46]
+08-12-2022 22:44:54.773[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.a.c.c.C.[.[localhost].[/account]::173::log] -- Initializing Spring embedded WebApplicationContext
+08-12-2022 22:44:54.774[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.b.w.s.c.ServletWebServerApplicationContext::290::prepareWebApplicationContext] -- Root WebApplicationContext: initialization completed in 3607 ms
+08-12-2022 22:44:56.525[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][com.zaxxer.hikari.HikariDataSource::110::getConnection] -- HikariPool-1 - Starting...
+08-12-2022 22:44:56.852[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][com.zaxxer.hikari.HikariDataSource::123::getConnection] -- HikariPool-1 - Start completed.
+08-12-2022 22:44:56.997[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.h.jpa.internal.util.LogHelper::31::logPersistenceUnitInformation] -- HHH000204: Processing PersistenceUnitInfo [name: default]
+08-12-2022 22:44:57.100[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][org.hibernate.Version::44::logVersion] -- HHH000412: Hibernate ORM core version 5.4.32.Final
+08-12-2022 22:44:57.330[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.h.annotations.common.Version::56::<clinit>] -- HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+08-12-2022 22:44:57.518[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][org.hibernate.dialect.Dialect::175::<init>] -- HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-12-2022 22:44:58.350[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.h.e.t.j.p.i.JtaPlatformInitiator::52::initiateService] -- HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-12-2022 22:44:58.361[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.o.j.LocalContainerEntityManagerFactoryBean::437::buildNativeEntityManagerFactory] -- Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-12-2022 22:44:58.654[restartedMain][ WARN][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration::219::openEntityManagerInViewInterceptor] -- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-12-2022 22:45:01.141[restartedMain][ WARN][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.b.d.a.OptionalLiveReloadServer::61::startServer] -- Unable to start LiveReload server
+08-12-2022 22:45:01.191[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration::87::discoveryClientOptionalArgs] -- Eureka HTTP Client uses Jersey
+08-12-2022 22:45:01.414[restartedMain][ WARN][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger::82::logWarning] -- Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08-12-2022 22:45:01.539[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.b.a.e.web.EndpointLinksResolver::58::<init>] -- Exposing 16 endpoint(s) beneath base path '/actuator'
+08-12-2022 22:45:01.626[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.c.n.eureka.InstanceInfoFactory::67::create] -- Setting initial instance status as: STARTING
+08-12-2022 22:45:01.771[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::372::<init>] -- Initializing Eureka in region us-east-1
+08-12-2022 22:45:01.979[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.p.DiscoveryJerseyProvider::70::<init>] -- Using JSON encoding codec LegacyJacksonJson
+08-12-2022 22:45:01.979[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.p.DiscoveryJerseyProvider::71::<init>] -- Using JSON decoding codec LegacyJacksonJson
+08-12-2022 22:45:02.123[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.p.DiscoveryJerseyProvider::80::<init>] -- Using XML encoding codec XStreamXml
+08-12-2022 22:45:02.123[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.p.DiscoveryJerseyProvider::81::<init>] -- Using XML decoding codec XStreamXml
+08-12-2022 22:45:02.303[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 22:45:02.328[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1007::fetchRegistry] -- Disable delta property : false
+08-12-2022 22:45:02.328[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1008::fetchRegistry] -- Single vip registry refresh property : null
+08-12-2022 22:45:02.329[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1009::fetchRegistry] -- Force full registry fetch : false
+08-12-2022 22:45:02.329[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1010::fetchRegistry] -- Application is null : false
+08-12-2022 22:45:02.329[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1011::fetchRegistry] -- Registered Applications size is zero : true
+08-12-2022 22:45:02.330[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1013::fetchRegistry] -- Application version is -1: true
+08-12-2022 22:45:02.330[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1097::getAndStoreFullRegistry] -- Getting all instance registry info from the eureka server
+08-12-2022 22:45:02.472[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1106::getAndStoreFullRegistry] -- The response status is 200
+08-12-2022 22:45:02.475[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1321::initScheduledTasks] -- Starting heartbeat executor: renew interval is: 30
+08-12-2022 22:45:02.478[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.discovery.InstanceInfoReplicator::60::<init>] -- InstanceInfoReplicator onDemand update allowed rate per min is 4
+08-12-2022 22:45:02.482[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::492::<init>] -- Discovery Client initialized at timestamp 1670568302481 with initial instances count: 4
+08-12-2022 22:45:02.491[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.c.n.e.s.EurekaServiceRegistry::41::register] -- Registering application ACCOUNT-SERVICE with eureka with status UP
+08-12-2022 22:45:02.492[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1352::notify] -- Saw local status change event StatusChangeEvent [timestamp=1670568302492, current=UP, previous=STARTING]
+08-12-2022 22:45:02.494[DiscoveryClient-InstanceInfoReplicator-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::873::register] -- DiscoveryClient_ACCOUNT-SERVICE/192.168.0.234:account-service:2225: registering service...
+08-12-2022 22:45:02.496[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.a.coyote.http11.Http11NioProtocol::173::log] -- Starting ProtocolHandler ["http-nio-2225"]
+08-12-2022 22:45:02.528[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.b.w.e.tomcat.TomcatWebServer::220::start] -- Tomcat started on port(s): 2225 (http) with context path '/account'
+08-12-2022 22:45:02.529[restartedMain][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.c.n.e.s.EurekaAutoServiceRegistration::144::onApplicationEvent] -- Updating port to 2225
+08-12-2022 22:45:02.536[DiscoveryClient-InstanceInfoReplicator-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::882::register] -- DiscoveryClient_ACCOUNT-SERVICE/192.168.0.234:account-service:2225 - registration status: 204
+08-12-2022 22:50:02.343[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 22:55:02.358[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:00:02.368[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:05:02.439[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:10:02.458[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:15:02.478[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:20:02.494[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:25:02.512[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:30:02.526[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:35:02.504[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:40:02.521[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:45:02.550[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:50:02.568[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+08-12-2022 23:55:02.509[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+09-12-2022 00:00:02.519[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+09-12-2022 00:05:02.537[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+09-12-2022 00:10:02.550[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+09-12-2022 00:15:02.556[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+09-12-2022 00:20:02.572[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+09-12-2022 00:25:02.629[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+09-12-2022 00:30:02.643[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+09-12-2022 00:35:02.658[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+09-12-2022 00:40:02.672[AsyncResolver-bootstrap-executor-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.r.aws.ConfigClusterResolver::43::getClusterEndpoints] -- Resolving eureka endpoints via configuration
+09-12-2022 00:43:44.728[Thread-1][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.c.n.e.s.EurekaServiceRegistry::62::deregister] -- Unregistering application ACCOUNT-SERVICE with eureka with status DOWN
+09-12-2022 00:43:44.737[Thread-1][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::1352::notify] -- Saw local status change event StatusChangeEvent [timestamp=1670575424737, current=DOWN, previous=UP]
+09-12-2022 00:43:44.746[DiscoveryClient-InstanceInfoReplicator-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::873::register] -- DiscoveryClient_ACCOUNT-SERVICE/192.168.0.234:account-service:2225: registering service...
+09-12-2022 00:43:44.782[DiscoveryClient-InstanceInfoReplicator-0][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::882::register] -- DiscoveryClient_ACCOUNT-SERVICE/192.168.0.234:account-service:2225 - registration status: 204
+09-12-2022 00:43:45.267[Thread-1][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][o.s.o.j.LocalContainerEntityManagerFactoryBean::651::destroy] -- Closing JPA EntityManagerFactory for persistence unit 'default'
+09-12-2022 00:43:45.342[Thread-1][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][com.zaxxer.hikari.HikariDataSource::350::close] -- HikariPool-1 - Shutdown initiated...
+09-12-2022 00:43:45.369[Thread-1][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][com.zaxxer.hikari.HikariDataSource::352::close] -- HikariPool-1 - Shutdown completed.
+09-12-2022 00:43:46.433[Thread-1][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::935::shutdown] -- Shutting down DiscoveryClient ...
+09-12-2022 00:43:49.444[Thread-1][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::971::unregister] -- Unregistering ...
+09-12-2022 00:43:49.485[Thread-1][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.t.d.RedirectingEurekaHttpClient::93::execute] -- Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=java.net.ConnectException: Connection refused (Connection refused) stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:184)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:177)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:309)
+	at org.springframework.boot.devtools.restart.Restarter.lambda$restart$1(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:629)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 45 more
+
+09-12-2022 00:43:49.487[Thread-1][ WARN][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.t.d.RetryableEurekaHttpClient::130::execute] -- Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+09-12-2022 00:43:49.491[Thread-1][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.t.d.RedirectingEurekaHttpClient::84::execute] -- Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=java.net.ConnectException: Connection refused (Connection refused) stacktrace=com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.delete(WebResource.java:591)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.cancel(AbstractJerseyEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:184)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:177)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:309)
+	at org.springframework.boot.devtools.restart.Restarter.lambda$restart$1(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:629)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 46 more
+
+09-12-2022 00:43:49.492[Thread-1][ WARN][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.n.d.s.t.d.RetryableEurekaHttpClient::130::execute] -- Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+09-12-2022 00:43:49.497[Thread-1][ERROR][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::975::unregister] -- DiscoveryClient_ACCOUNT-SERVICE/192.168.0.234:account-service:2225 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:184)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:177)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:309)
+	at org.springframework.boot.devtools.restart.Restarter.lambda$restart$1(Restarter.java:251)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:629)
+09-12-2022 00:43:49.532[Thread-1][ INFO][account-service][session-id=][parentSpanId=][traceId=][spanId=][spanExport=][c.netflix.discovery.DiscoveryClient::960::shutdown] -- Completed shut down of DiscoveryClient

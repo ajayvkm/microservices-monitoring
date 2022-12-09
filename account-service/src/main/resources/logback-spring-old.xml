@@ -10,7 +10,7 @@
         <encoder>
             <pattern>
                 <!--                %d{dd-MM-yyyy HH:mm:ss.SSS}[%thread][%5p][${SPRING_APP_NAME}][session-id=%X{session-id}][parentSpanId=%X{X-B3-ParentSpanId}][traceId=%X{X-B3-TraceId}][spanId=%X{X-B3-SpanId}][spanExport=%X{X-Span-Export}][%c{36}::%L::%M] -- %m%n-->
-                %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n
+                %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread][%5p][${SPRING_APP_NAME}][traceId=%X{traceId}][spanId=%X{spanId}] %-5level %logger{36}.%M - %msg%n
             </pattern>
         </encoder>
     </appender>

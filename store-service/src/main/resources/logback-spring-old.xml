@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProperty scope="context" name="SPRING_APP_NAME" source="spring.application.name"/>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+<!--            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS}[%thread][%5p][${SPRING_APP_NAME}][session-id=%X{session-id}][parentSpanId=%X{parentId}][traceId=%X{traceId}][spanId=%X{id}][spanExport=%X{shared}][%c{36}::%L::%M] &#45;&#45; %m%n</pattern>-->
+            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread][%5p][${SPRING_APP_NAME}][parentSpanId=%X{parentId}][traceId=%X{traceId}][spanId=%X{id}] %-5level %logger{36}.%M - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="SAVE-TO-FILE" class="ch.qos.logback.core.FileAppender">
+        <file>/users/avishwaka1/sdsu-projects/sdsu-project/microservices-monitoring/logs/micro-store-service.log
+        </file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+<!--            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS}[%thread][%5p][${SPRING_APP_NAME}][session-id=%X{session-id}][parentSpanId=%X{parentId}][traceId=%X{traceId}][spanId=%X{id}][spanExport=%X{shared}][%c{36}::%L::%M] &#45;&#45; %m%n</pattern>-->
+            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread][%5p][${SPRING_APP_NAME}][parentSpanId=%X{parentId}][traceId=%X{traceId}][spanId=%X{id}] %-5level %logger{36}.%M - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="com.sdsu" additivity="false" level="info">
+        <appender-ref ref="SAVE-TO-FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <logger name="com.sdsu" additivity="false" level="WARN">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="SAVE-TO-FILE"/>
+    </logger>
+
+    <logger name="com.sdsu" additivity="false" level="ERROR">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="SAVE-TO-FILE"/>
+    </logger>
+
+
+    <root level="INFO">
+        <appender-ref ref="SAVE-TO-FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
