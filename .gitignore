@@ -33,3 +33,4 @@ build/
 .vscode/
 cloud-config-server/.mvn/wrapper/maven-wrapper.jar
 cloud-config-server/.mvn/wrapper/maven-wrapper.properties
+LOG_FILE_IS_UNDEFINED

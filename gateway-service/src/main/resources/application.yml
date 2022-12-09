@@ -49,7 +49,10 @@ spring:
               args:
                 name: product-service
                 fallbackuri: forward:/productFallback
-
+        - id: payment-service
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/**
 management:
   endpoints:
     web:

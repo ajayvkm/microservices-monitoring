@@ -2,12 +2,12 @@ package com.sdsu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@EnableDiscoveryClient
-public class AccountServiceApplication {
+@EnableEurekaClient
+public class PaymentServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AccountServiceApplication.class, args);
+        SpringApplication.run(PaymentServiceApplication.class, args);
     }
 }

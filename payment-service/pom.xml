@@ -9,9 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sdsu</groupId>
-    <artifactId>account-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>payment-service</artifactId>
     <packaging>jar</packaging>
 
     <properties>
@@ -80,14 +78,18 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>2.1.2</version>
+            <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
             <version>6.6</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
@@ -100,7 +102,7 @@
     </dependencies>
 
     <build>
-        <finalName>account-service</finalName>
+        <finalName>product-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -143,4 +145,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

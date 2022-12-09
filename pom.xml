@@ -19,6 +19,7 @@
 
 	<properties>
 		<spring-cloud.version>2020.0.3</spring-cloud.version>
+<!--		<spring-cloud.version>2021.0.5</spring-cloud.version>-->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>11</java.version>
@@ -36,6 +37,7 @@
 		<module>discovery-service</module>
 		<module>hystrix-dashboard-service</module>
 		<module>cloud-config-server</module>
+		<module>payment-service</module>
 	</modules>
 
 	<dependencies>

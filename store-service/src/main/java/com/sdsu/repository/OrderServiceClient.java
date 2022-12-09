@@ -58,7 +58,7 @@ public class OrderServiceClient {
     }
 
     public ResponseEntity<Order> placeOrder(final Order order) {
-        String url = baseUrl + "api/v1/orders/add";
+        String url = baseUrl + "api/v1/orders/book";
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
         headers.set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);

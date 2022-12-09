@@ -1,12 +1,16 @@
 package com.sdsu.controller;
 
+import com.sdsu.dto.Payment;
+import com.sdsu.dto.TransactionRequest;
+import com.sdsu.dto.TransactionResponse;
 import com.sdsu.model.dto.OrderDto;
 import com.sdsu.model.entity.Order;
 import com.sdsu.repository.OrderRepository;
+import com.sdsu.service.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +36,11 @@ import java.util.Optional;
 @CrossOrigin(origins = "http://localhost:8762")
 public class OrderController {
 
+    @Autowired
     private final OrderRepository repository;
+
+    @Autowired
+    private OrderService service;
 
     @GetMapping("/")
     @Operation(summary = "Welcome API.")
@@ -54,7 +62,7 @@ public class OrderController {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
         } catch (Exception e) {
-            log.error("Search order by id failed " + e.getMessage());
+            log.error("Search order by id failed " + e.getStackTrace());
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -72,19 +80,28 @@ public class OrderController {
             log.info("Executing fetching all orders {}", allOrders);
             return new ResponseEntity<>(allOrders, HttpStatus.OK);
         } catch (Exception e) {
-            log.error("Executing fetching all orders failed " + e.getMessage());
+            log.error("Executing fetching all orders failed " + e.getStackTrace());
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-    @PostMapping("/add")
-    @Operation(summary = "Use this api to add new order.")
-    public ResponseEntity<Order> addNewOrder(@RequestBody OrderDto order)
+    @PostMapping("/book")
+    @Operation(summary = "Use this api to book new order.")
+    public ResponseEntity<?> addNewOrder(@RequestBody OrderDto orderDto)
     {
+        TransactionRequest request = new TransactionRequest();
+
         try {
-            Order _order = repository.save(new Order(order.getProductId(), order.getAccountId(), order.getQuantity(), order.getTotalPrice(), order.getDiscountedPrice(), new Date(), "system"));
-            log.info("New order added to the database {}", _order.getId());
-            return new ResponseEntity<>(_order, HttpStatus.CREATED);
+            Order order = new Order(orderDto.getProductId(), orderDto.getAccountId(), orderDto.getQuantity(), orderDto.getTotalPrice(), orderDto.getDiscountedPrice(), "new", new Date(), "system");
+            request.setOrder(order);
+
+            Payment payment = new Payment();
+            payment.setAmount(order.getDiscountedPrice());
+            request.setPayment(payment);
+
+            TransactionResponse transactionResponse = service.saveOrder(request);
+            log.info("New order added to the database {}", order.getId());
+            return new ResponseEntity<>(transactionResponse, HttpStatus.CREATED);
         } catch (Exception e) {
             log.error("Error occurred while saving the order");
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -122,7 +139,7 @@ public class OrderController {
             log.info("Order deleted successfully from the database {}", id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
-            log.info("Order failed to delete from the database {}", id, e.getMessage());
+            log.info("Order failed to delete from the database {}", id, e.getStackTrace());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

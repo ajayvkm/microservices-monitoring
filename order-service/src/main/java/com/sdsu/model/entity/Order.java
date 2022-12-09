@@ -40,6 +40,10 @@ public class Order {
     @Column(name = "discountedprice")
     private Double discountedPrice;
 
+
+    @Column(name = "status")
+    private String status;
+
     @Column(name = "createdate")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
@@ -47,13 +51,14 @@ public class Order {
     @Column(name = "createdby")
     private String createdBy;
 
-    public Order(Integer productId, Integer accountId, Integer quantity, Double price, Double discountedPrice,
+    public Order(Integer productId, Integer accountId, Integer quantity, Double price, Double discountedPrice, String status,
             Date createdDate, String createdBy) {
         this.productId = productId;
         this.accountId = accountId;
         this.quantity = quantity;
         this.price = price;
         this.discountedPrice = discountedPrice;
+        this.status = status;
         this.createdDate = createdDate;
         this.createdBy = createdBy;
     }

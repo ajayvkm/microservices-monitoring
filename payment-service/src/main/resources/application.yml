@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:2226}
+  servlet:
+    context-path: /payment
+
+spring:
+  application:
+    name: payment-service
+  config:
+    import: configserver:http://localhost:9196
+
+ribbon:
+  eureka:
+    enabled: false
