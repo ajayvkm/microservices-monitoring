@@ -62,13 +62,12 @@ public class OrderServiceClient {
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
         headers.set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
-
         HttpEntity<?> requestEntity = new HttpEntity<>(order, headers);
         URI uri = UriComponentsBuilder.fromHttpUrl(url).build().toUri();
 
         try {
-            ResponseEntity<Order> placedOrder = restTemplate.exchange(uri, HttpMethod.POST, requestEntity, Order.class);
-            return placedOrder;
+            ResponseEntity<Order> responseEntity = restTemplate.exchange(uri, HttpMethod.POST, requestEntity, Order.class);
+            return responseEntity;
         } catch (Exception e) {
             log.error("Failed to place order {}", e.getMessage());
         }

@@ -10,7 +10,4 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TransactionResponse {
     private Order order;
-    private double amount;
-    private String transactionId;
-    private String message;
 }

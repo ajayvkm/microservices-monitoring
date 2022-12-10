@@ -1,7 +1,12 @@
 package com.sdsu.repository;
 
-import com.sdsu.model.Order;
-import com.sdsu.model.Product;
+import static java.util.stream.Collectors.toCollection;
+
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
@@ -13,13 +18,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import com.sdsu.model.Product;
 
-import static java.util.stream.Collectors.toCollection;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Component
 public class ProductServiceClient {
     @Autowired
@@ -28,8 +31,16 @@ public class ProductServiceClient {
     String baseUrl = "http://product-service/product/";
 
     public Product findById(Integer productId) {
-        ResponseEntity<Product> response = restTemplate.getForEntity(baseUrl+"api/v1/products/"+productId, Product.class);
-        Product product = response.getBody();
+        Product product = null;
+        try {
+            ResponseEntity<Product> response = restTemplate.getForEntity(baseUrl+"api/v1/products/"+productId, Product.class);
+            if(null != response && response.getStatusCode().is2xxSuccessful() && null != response.getBody()) {
+                product = response.getBody();
+            }
+        } catch (Exception e) {
+            log.error("Failed to get product details for productId {}", productId);
+            log.error(e.getMessage());
+        }
         return product;
     }
 

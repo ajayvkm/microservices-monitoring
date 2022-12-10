@@ -55,8 +55,14 @@ public class OrderController {
         try {
             Optional<Order> orderData = repository.findById(id);
             if (orderData.isPresent()) {
-                log.info("Order {} detail fetched {}", id, orderData.get());
-                return new ResponseEntity<>(orderData.get(), HttpStatus.OK);
+
+                // Find the payment
+                Payment payment = service.getPayment(id);
+                Order order = orderData.get();
+                order.setPayment(payment);
+
+                log.info("Order {} detail fetched {}", id, order);
+                return new ResponseEntity<>(order, HttpStatus.OK);
             } else {
                 log.warn("Order {} details not found", id);
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -77,6 +83,12 @@ public class OrderController {
                 log.warn("Orders list empty.");
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
+            // Get Payment
+            allOrders.forEach(order -> {
+                // Find the payment
+                Payment payment = service.getPayment(order.getId());
+                order.setPayment(payment);
+            });
             log.info("Executing fetching all orders {}", allOrders);
             return new ResponseEntity<>(allOrders, HttpStatus.OK);
         } catch (Exception e) {
@@ -92,7 +104,7 @@ public class OrderController {
         TransactionRequest request = new TransactionRequest();
 
         try {
-            Order order = new Order(orderDto.getProductId(), orderDto.getAccountId(), orderDto.getQuantity(), orderDto.getTotalPrice(), orderDto.getDiscountedPrice(), "new", new Date(), "system");
+            Order order = new Order(orderDto.getProductId(), orderDto.getAccountId(), orderDto.getQuantity(), orderDto.getTotalPrice(), orderDto.getDiscountedPrice(), "new", new Date(), "system", null, null);
             request.setOrder(order);
 
             Payment payment = new Payment();

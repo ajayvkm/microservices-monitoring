@@ -47,35 +47,33 @@ public class StoreController {
     public ResponseEntity<List<OrderDTO>> getOrders()
     {
 
+        List<OrderDTO> orderDTOList = new ArrayList<>();
         log.warn("Fetching all orders...");
         List<Order> orders = orderService.findAll();
         Map<Integer, Account> accounts = new HashMap<>();
         Map<Integer, Product> products = new HashMap<>();
 
         log.warn("Fetching accounts of orders...");
-        orders.stream()
-                .filter(o->!accounts.containsKey(o.getAccountId()))
-                .map(o->accountService.findById(o.getAccountId()))
-                .forEach(a->accounts.put(a.getId(), a));
+        for (Order order: orders) {
+            OrderDTO orderDTO = new OrderDTO();
+            orderDTO.setOrder(order);
+            // Find the Account Details
+            Integer accountId = order.getAccountId();
+            if(null != accountId) {
+                Account account = accountService.findById(accountId);
+                orderDTO.setAccount(account);
+            }
 
-        log.warn("Fetching products of orders...");
-        orders.stream()
-                .filter(o->!products.containsKey(o.getProductId()))
-                .map(o->productService.findById(o.getProductId()))
-                .forEach(a->products.put(a.getId(), a));
-
-        log.warn("Generating composite of orders...");
-        List<OrderDTO> orderDTOList = new ArrayList<>();
-        orders.forEach(o->{
-            orderDTOList.add(new OrderDTO(
-                    o.getId(),
-                    o.getQuantity(),
-                    o.getTotalPrice(),
-                    o.getDiscountedPrice(),
-                    accounts.get(o.getAccountId()).getFullName(),
-                    products.get(o.getProductId()).getName()
-            ));
-        });
+            Integer productId = order.getProductId();
+            if (null != productId) {
+                Product product = productService.findById(productId);
+                if(null != product)
+                    orderDTO.setProduct(product);
+            }
+            // Find Payment details
+            orderDTOList.add(orderDTO);
+        }
+        
         return ResponseEntity.ok(orderDTOList);
     }
 

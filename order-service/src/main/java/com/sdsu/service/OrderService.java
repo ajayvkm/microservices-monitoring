@@ -27,7 +27,7 @@ import java.net.URI;
 public class OrderService {
     Logger logger= LoggerFactory.getLogger(OrderService.class);
     @Autowired
-    private OrderRepository repository;
+    OrderRepository repository;
 
     String baseUrl = "http://payment-service/payment/";
 
@@ -52,9 +52,9 @@ public class OrderService {
         URI uri = UriComponentsBuilder.fromHttpUrl(url).build().toUri();
 
         logger.info("Order-Service Request : "+new ObjectMapper().writeValueAsString(request));
-        //Payment paymentResponse = restTemplate.postForObject(uri, payment, Payment.class);
-        ResponseEntity<Payment> paymentResponse = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Payment.class);
+        ResponseEntity<Payment> paymentResponse = restTemplate.exchange(uri, HttpMethod.POST, requestEntity, Payment.class);
         Payment paymentR = paymentResponse.getBody();
+        order.setPayment(paymentR);
         if(paymentR.getPaymentStatus().equals("success")) {
             response = "payment processing successful and order placed";
         } else {
@@ -62,7 +62,21 @@ public class OrderService {
             repository.save(order);
             response = "there is a failure in payment api , order added to cart";
         }
+        order.setPaymentStatusMessage(response);
         logger.info("Order Service getting Response from Payment-Service : "+new ObjectMapper().writeValueAsString(response));
-        return new TransactionResponse(order, paymentR.getAmount(), paymentR.getTransactionId(), response);
+        return new TransactionResponse(order);
+    }
+
+
+    public Payment getPayment(int orderId) {
+        String url = baseUrl + "payment/" + orderId;
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
+        headers.set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
+        HttpEntity<?> requestEntity = new HttpEntity<>(headers);
+        URI uri = UriComponentsBuilder.fromHttpUrl(url).build().toUri();
+        ResponseEntity<Payment> paymentResponse = restTemplate.exchange(uri, HttpMethod.GET, requestEntity, Payment.class);
+        return paymentResponse.getBody();
     }
 }

@@ -8,7 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
+import com.sdsu.dto.Payment;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -51,8 +53,14 @@ public class Order {
     @Column(name = "createdby")
     private String createdBy;
 
+    @Transient
+    private Payment payment;
+
+    @Transient
+    private String paymentStatusMessage;
+
     public Order(Integer productId, Integer accountId, Integer quantity, Double price, Double discountedPrice, String status,
-            Date createdDate, String createdBy) {
+            Date createdDate, String createdBy, Payment payment, String paymentStatusMessage) {
         this.productId = productId;
         this.accountId = accountId;
         this.quantity = quantity;
@@ -61,5 +69,7 @@ public class Order {
         this.status = status;
         this.createdDate = createdDate;
         this.createdBy = createdBy;
+        this.payment = payment;
+        this.paymentStatusMessage = paymentStatusMessage;
     }
 }

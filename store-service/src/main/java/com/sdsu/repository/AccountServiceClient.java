@@ -1,6 +1,12 @@
 package com.sdsu.repository;
 
-import com.sdsu.model.Account;
+import static java.util.stream.Collectors.toCollection;
+
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
@@ -13,13 +19,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import com.sdsu.model.Account;
 
-import static java.util.stream.Collectors.toCollection;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Component
 public class AccountServiceClient {
 
@@ -29,8 +33,15 @@ public class AccountServiceClient {
     RestTemplate restTemplate;
 
     public Account findById(@PathVariable("accountId") Integer accountId) {
-        ResponseEntity<Account> response = restTemplate.getForEntity(baseUrl+"api/v1/accounts/"+accountId, Account.class);
-        Account account = response.getBody();
+        Account account = null;
+        try {
+            ResponseEntity<Account> response = restTemplate.getForEntity(baseUrl + "api/v1/accounts/" + accountId, Account.class);
+            if(null != response && response.getStatusCode().is2xxSuccessful() && null != response.getBody())
+                account = response.getBody();
+        } catch (Exception exception) {
+            log.error("Failed to get account details for accountId {}", accountId);
+            log.error(exception.getMessage());
+        }
         return account;
     }
 
@@ -43,7 +54,6 @@ public class AccountServiceClient {
 
         HttpEntity<?> requestEntity = new HttpEntity<>(null, headers);
         URI uri = UriComponentsBuilder.fromHttpUrl(url).build().toUri();
-
 
         ParameterizedTypeReference<Collection<Account>> typeReference = new ParameterizedTypeReference<Collection<Account>>() {
         };

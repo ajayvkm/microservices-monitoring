@@ -1,26 +1,22 @@
 package com.sdsu.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Order {
-
-    private Integer id;
-    private Integer productId;
-    private Integer accountId;
-    private Integer quantity;
-
-    private Double totalPrice;
-    private Double discountedPrice;
-
-    public Order(Integer id, Integer productId, Integer accountId, Integer quantity, Double totalPrice, Double discountedPrice) {
-        this.id = id;
-        this.productId = productId;
-        this.accountId = accountId;
-        this.quantity = quantity;
-        this.totalPrice = totalPrice;
-        this.discountedPrice = discountedPrice;
-    }
+    public Integer id;
+    public Integer productId;
+    public Integer accountId;
+    public Integer quantity;
+    public Double price;
+    public Double discountedPrice;
+    public String status;
+    public String createdDate;
+    public String createdBy;
+    public Payment payment;
+    public String paymentStatusMessage;
 }
