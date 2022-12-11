@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderDTO {
+public class OrderDto {
     private Order order;
     private Account account;
     private Product product;

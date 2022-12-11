@@ -1,22 +1,16 @@
-package com.sdsu.model;
+package com.sdsu.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Order {
-    public Integer id;
+@NoArgsConstructor
+public class OrderRequest {
     public Integer productId;
     public Integer accountId;
     public Integer quantity;
     public Double totalPrice;
     public Double discountedPrice;
-    public String status;
-    public String createdDate;
-    public String createdBy;
-    public Payment payment;
-    public String paymentStatusMessage;
 }

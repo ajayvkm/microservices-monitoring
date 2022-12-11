@@ -39,7 +39,7 @@ public class OrderService {
         Order order = request.getOrder();
         String url = baseUrl + "payment/process-payment";
         Payment payment = request.getPayment();
-        payment.setAmount(order.getPrice());
+        payment.setAmount(order.getTotalPrice());
         //rest call
 
         repository.save(order);

@@ -17,9 +17,9 @@ import javax.persistence.Table;
 public class Payment {
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     private String paymentStatus;
     private String transactionId;
-    private int orderId;
-    private double amount;
+    private Integer orderId;
+    private Double amount;
 }

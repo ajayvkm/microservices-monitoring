@@ -1,5 +1,7 @@
 package com.sdsu.repository;
 
+import com.sdsu.dto.OrderRequest;
+import com.sdsu.dto.TransactionResponse;
 import com.sdsu.model.Order;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +59,7 @@ public class OrderServiceClient {
         return orderList;
     }
 
-    public ResponseEntity<Order> placeOrder(final Order order) {
+    public ResponseEntity<TransactionResponse> placeOrder(final OrderRequest order) {
         String url = baseUrl + "api/v1/orders/book";
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
@@ -66,7 +68,7 @@ public class OrderServiceClient {
         URI uri = UriComponentsBuilder.fromHttpUrl(url).build().toUri();
 
         try {
-            ResponseEntity<Order> responseEntity = restTemplate.exchange(uri, HttpMethod.POST, requestEntity, Order.class);
+            ResponseEntity<TransactionResponse> responseEntity = restTemplate.exchange(uri, HttpMethod.POST, requestEntity, TransactionResponse.class);
             return responseEntity;
         } catch (Exception e) {
             log.error("Failed to place order {}", e.getMessage());

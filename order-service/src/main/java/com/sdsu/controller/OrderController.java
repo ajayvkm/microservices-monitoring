@@ -129,7 +129,7 @@ public class OrderController {
             Order _order = orderData.get();
             _order.setProductId(order.getProductId());
             _order.setAccountId(order.getAccountId());
-            _order.setPrice(order.getTotalPrice());
+            _order.setTotalPrice(order.getTotalPrice());
             _order.setDiscountedPrice(order.getDiscountedPrice());
             _order.setCreatedDate(new Date());
             _order.setCreatedBy("system");

@@ -37,7 +37,7 @@ public class Order {
     private Integer quantity;
 
     @Column(name = "totalprice")
-    private Double price;
+    private Double totalPrice;
 
     @Column(name = "discountedprice")
     private Double discountedPrice;
@@ -59,12 +59,12 @@ public class Order {
     @Transient
     private String paymentStatusMessage;
 
-    public Order(Integer productId, Integer accountId, Integer quantity, Double price, Double discountedPrice, String status,
+    public Order(Integer productId, Integer accountId, Integer quantity, Double totalPrice, Double discountedPrice, String status,
             Date createdDate, String createdBy, Payment payment, String paymentStatusMessage) {
         this.productId = productId;
         this.accountId = accountId;
         this.quantity = quantity;
-        this.price = price;
+        this.totalPrice = totalPrice;
         this.discountedPrice = discountedPrice;
         this.status = status;
         this.createdDate = createdDate;
