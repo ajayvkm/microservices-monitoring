@@ -59,7 +59,7 @@ public class ProductController {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
         } catch (Exception e) {
-            log.error("Search product by id failed " + e.getMessage());
+            log.error("Search product by id failed " + e.getMessage(), e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -69,7 +69,7 @@ public class ProductController {
     public ResponseEntity<List<Product>> getAll()
     {
         try {
-            List<Product> allProducts = repository.findAll();
+            List<Product> allProducts = repository.findAllByOrderByIdDesc();
             if (allProducts.isEmpty()) {
                 log.warn("Products list empty.");
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -77,7 +77,7 @@ public class ProductController {
             log.info("Executing fetching all products {}", allProducts);
             return new ResponseEntity<>(allProducts, HttpStatus.OK);
         } catch (Exception e) {
-            log.error("Executing fetching all products failed " + e.getMessage());
+            log.error("Executing fetching all products failed " + e.getMessage(), e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -91,7 +91,7 @@ public class ProductController {
             log.info("New product added to the database {}", _product.getId());
             return new ResponseEntity<>(_product, HttpStatus.CREATED);
         } catch (Exception e) {
-            log.error("Error occurred while saving the product");
+            log.error("Error occurred while saving the product", e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -123,7 +123,7 @@ public class ProductController {
             log.info("Product deleted successfully from the database {}", id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
-            log.info("Order failed to delete from the database {}", id, e.getMessage());
+            log.info("Order failed to delete from the database {}", id, e.getMessage(), e);
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

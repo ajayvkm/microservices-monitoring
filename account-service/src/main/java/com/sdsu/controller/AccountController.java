@@ -58,7 +58,7 @@ public class AccountController {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
         } catch (Exception e) {
-            log.error("Search account by id failed " + e.getMessage());
+            log.error("Search account by id failed " + e.getMessage(), e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -68,7 +68,7 @@ public class AccountController {
     public ResponseEntity<List<Account>> getAll()
     {
         try {
-            List<Account> allAccounts = repository.findAll();
+            List<Account> allAccounts = repository.findAllByOrderByIdDesc();
             if (allAccounts.isEmpty()) {
                 log.warn("Accounts list empty.");
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -76,7 +76,7 @@ public class AccountController {
             log.info("Executing fetching all accounts {}", allAccounts);
             return new ResponseEntity<>(allAccounts, HttpStatus.OK);
         } catch (Exception e) {
-            log.error("Executing fetching all accounts failed " + e.getMessage());
+            log.error("Executing fetching all accounts failed " + e.getMessage(), e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -90,7 +90,7 @@ public class AccountController {
             log.info("New account added to the database {}", _account.getId());
             return new ResponseEntity<>(_account, HttpStatus.CREATED);
         } catch (Exception e) {
-            log.error("Error occurred while saving the account");
+            log.error("Error occurred while saving the account", e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -136,7 +136,7 @@ public class AccountController {
             log.info("All accounts deleted successfully from the database.");
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
-            log.info("All accounts failed to delete from the database.");
+            log.error("All accounts failed to delete from the database.", e);
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

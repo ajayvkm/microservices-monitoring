@@ -92,4 +92,15 @@ public class StoreController {
         }
 
     }
+
+    @PostMapping("/exception")
+    @Operation(summary = "Use this api to log exception.")
+    public ResponseEntity<?> addException() {
+        try {
+            throw new ArrayIndexOutOfBoundsException();
+        } catch (ArrayIndexOutOfBoundsException e) {
+            log.error(String.format("message: %s", e.getMessage()), e);
+        }
+        return new ResponseEntity<>("Exception logged.", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }

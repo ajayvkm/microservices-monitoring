@@ -37,7 +37,7 @@ public class OrderService {
     public TransactionResponse saveOrder(TransactionRequest request) throws JsonProcessingException {
         String response = "";
         Order order = request.getOrder();
-        String url = baseUrl + "payment/process-payment";
+        String url = baseUrl + "api/v1/payment/process-payment";
         Payment payment = request.getPayment();
         payment.setAmount(order.getTotalPrice());
         //rest call
@@ -69,7 +69,7 @@ public class OrderService {
 
 
     public Payment getPayment(int orderId) {
-        String url = baseUrl + "payment/" + orderId;
+        String url = baseUrl + "api/v1/payment/" + orderId;
 
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
