@@ -13,6 +13,6 @@ import com.sdsu.model.entity.Account;
 public interface AccountRepository extends JpaRepository<Account, Integer> {
 
     Optional<Account> findById(@Param("id") Integer id);
-    List<Account> findAll();
+    List<Account> findAllByOrderByIdDesc();
     
 }

@@ -39,7 +39,7 @@ public class AccountServiceClient {
             if(null != response && response.getStatusCode().is2xxSuccessful() && null != response.getBody())
                 account = response.getBody();
         } catch (Exception exception) {
-            log.error("Failed to get account details for accountId {}", accountId);
+            log.error("Failed to get account details for accountId {}", accountId, exception);
             log.error(exception.getMessage());
         }
         return account;

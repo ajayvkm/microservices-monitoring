@@ -68,7 +68,7 @@ public class OrderController {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
         } catch (Exception e) {
-            log.error("Search order by id failed " + e.getStackTrace());
+            log.error("Search order by id failed " + e.getStackTrace(), e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -78,7 +78,7 @@ public class OrderController {
     public ResponseEntity<List<Order>> getAll()
     {
         try {
-            List<Order> allOrders = repository.findAll();
+            List<Order> allOrders = repository.findAllByOrderByIdDesc();
             if (allOrders.isEmpty()) {
                 log.warn("Orders list empty.");
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -92,7 +92,7 @@ public class OrderController {
             log.info("Executing fetching all orders {}", allOrders);
             return new ResponseEntity<>(allOrders, HttpStatus.OK);
         } catch (Exception e) {
-            log.error("Executing fetching all orders failed " + e.getStackTrace());
+            log.error("Executing fetching all orders failed " + e.getStackTrace(), e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -115,7 +115,7 @@ public class OrderController {
             log.info("New order added to the database {}", order.getId());
             return new ResponseEntity<>(transactionResponse, HttpStatus.CREATED);
         } catch (Exception e) {
-            log.error("Error occurred while saving the order");
+            log.error("Error occurred while saving the order", e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

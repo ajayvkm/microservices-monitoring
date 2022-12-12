@@ -38,7 +38,7 @@ public class ProductServiceClient {
                 product = response.getBody();
             }
         } catch (Exception e) {
-            log.error("Failed to get product details for productId {}", productId);
+            log.error("Failed to get product details for productId {}", productId, e);
             log.error(e.getMessage());
         }
         return product;

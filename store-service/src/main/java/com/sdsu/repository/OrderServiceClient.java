@@ -54,7 +54,7 @@ public class OrderServiceClient {
             orderList = accountCollection.stream().collect(toCollection(ArrayList::new));
         } catch (Exception e) {
             e.printStackTrace();
-            log.error(e.getMessage());
+            log.error(e.getMessage(), e);
         }
         return orderList;
     }
@@ -71,7 +71,7 @@ public class OrderServiceClient {
             ResponseEntity<TransactionResponse> responseEntity = restTemplate.exchange(uri, HttpMethod.POST, requestEntity, TransactionResponse.class);
             return responseEntity;
         } catch (Exception e) {
-            log.error("Failed to place order {}", e.getMessage());
+            log.error("Failed to place order {}", e.getMessage(), e);
         }
         return null;
     }

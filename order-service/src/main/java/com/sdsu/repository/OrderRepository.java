@@ -13,5 +13,5 @@ public interface OrderRepository extends JpaRepository<Order, Integer> {
 
     Optional<Order> findById(@Param("id") Integer id);
 
-    List<Order> findAll();
+    List<Order> findAllByOrderByIdDesc();
 }
