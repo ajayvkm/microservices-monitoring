@@ -1,0 +1,59 @@
+-- MySQL dump 10.13  Distrib 8.0.30, for macos12 (x86_64)
+--
+-- Host: localhost    Database: store_ms_db
+-- ------------------------------------------------------
+-- Server version	8.0.30
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `productid` int NOT NULL,
+  `accountid` int NOT NULL,
+  `quantity` int DEFAULT NULL,
+  `totalprice` decimal(10,2) DEFAULT NULL,
+  `discountedprice` decimal(10,2) DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL,
+  `createdate` datetime DEFAULT NULL,
+  `createdby` varchar(100) DEFAULT NULL,
+  `payment_status_message` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,3,1,2,10.00,5.00,'complete','2022-11-14 06:44:13','system',NULL),(2,2,1,2,20.00,15.00,NULL,'2022-11-14 06:27:52','system',NULL),(3,3,1,2,40.00,33.00,NULL,'2022-11-14 06:28:17','system',NULL),(4,4,1,3,36.00,12.00,NULL,'2022-11-14 06:28:49','system',NULL),(6,2,2,1,1000.00,995.00,NULL,'2022-11-14 06:29:41','system',NULL),(7,3,2,8,80.00,10.00,NULL,'2022-11-14 06:30:04','system',NULL),(8,4,2,1,10.00,10.00,NULL,'2022-11-14 06:30:26','system',NULL),(9,3,3,4,40.00,10.00,NULL,'2022-11-14 09:36:08','system',NULL),(10,2,3,1,90.00,90.00,NULL,'2022-11-14 06:31:03','system',NULL),(11,3,3,8,560.00,70.00,NULL,'2022-11-14 06:31:27','system',NULL),(12,4,3,2,10.00,5.00,NULL,'2022-11-14 06:31:53','system',NULL),(13,4,4,1,10.00,10.00,NULL,'2022-11-14 09:37:04','system',NULL),(14,2,4,4,20.00,5.00,NULL,'2022-11-14 06:32:42','system',NULL),(15,3,4,5,500.00,100.00,NULL,'2022-11-14 06:33:07','system',NULL),(16,4,4,1,12.99,12.99,NULL,'2022-11-14 06:33:33','system',NULL),(17,4,4,7,NULL,70.00,NULL,'2022-11-27 09:46:59','system',NULL),(18,4,4,10,200.00,100.00,NULL,'2022-11-27 09:51:45','system',NULL),(19,2,1,7,5000.00,4500.00,'new','2022-12-09 03:29:42','system',NULL),(20,2,1,7,5000.00,4500.00,'new','2022-12-09 03:30:02','system',NULL),(21,2,1,7,5000.00,4500.00,'new','2022-12-09 03:30:24','system',NULL),(22,2,1,7,5000.00,4500.00,'new','2022-12-09 03:33:43','system',NULL),(23,2,1,7,5000.00,4500.00,'new','2022-12-09 03:43:56','system',NULL),(24,3,1,7,15000.00,14500.00,'new','2022-12-09 03:46:57','system',NULL),(25,3,1,7,15000.00,14500.00,'new','2022-12-09 03:56:11','system',NULL),(26,5,3,10,6000.00,5500.00,'new','2022-12-09 07:05:47','system',NULL),(27,7,6,15,5000.00,4900.00,'failed','2022-12-09 09:51:52','system',NULL),(28,7,6,15,5000.00,4900.00,'new','2022-12-09 09:52:12','system',NULL),(29,4,4,1,999.00,699.00,'new','2022-12-10 02:42:38','system',NULL),(30,4,4,2,1998.00,1398.00,'new','2022-12-10 03:02:40','system',NULL),(31,4,4,2,1998.00,1398.00,'failed','2022-12-10 03:05:06','system',NULL),(32,3,4,6,89.99,79.99,'new','2022-12-10 08:31:00','system',NULL),(33,3,3,6,89.99,79.99,'new','2022-12-10 08:33:00','system',NULL),(34,3,3,6,89.99,79.99,'failed','2022-12-10 08:33:16','system',NULL),(35,3,3,6,89.99,79.99,'new','2022-12-10 08:35:29','system',NULL),(36,3,3,6,89.99,79.99,'failed','2022-12-10 08:37:30','system',NULL),(37,4,4,6,89.99,79.99,'failed','2022-12-10 08:40:47','system',NULL),(38,4,4,6,89.99,79.99,'failed','2022-12-10 08:42:02','system',NULL),(39,4,3,10,99.99,89.99,'new','2022-12-10 08:57:03','system',NULL),(40,4,3,10,99.99,89.99,'failed','2022-12-10 08:57:22','system',NULL),(41,4,3,10,99.99,89.99,'new','2022-12-10 09:09:15','system',NULL),(42,2,2,15,700.00,550.00,'new','2022-12-11 01:13:47','system',NULL),(43,2,2,15,700.00,550.00,'new','2022-12-11 01:14:37','system',NULL),(44,2,2,15,700.00,550.00,'new','2022-12-11 01:15:58','system',NULL),(45,2,2,15,700.00,550.00,'new','2022-12-11 01:34:21','system',NULL),(46,2,3,55,NULL,14000.00,'new','2022-12-11 01:51:14','system',NULL),(47,3,2,10,599.00,570.00,'failed','2022-12-11 02:01:32','system',NULL),(48,3,2,100,5000.00,4900.00,'new','2022-12-11 07:02:04','system',NULL),(49,4,3,100,5050.00,4949.00,'failed','2022-12-11 07:03:10','system',NULL),(50,4,3,100,5051.00,4950.00,'new','2022-12-11 07:03:41','system',NULL),(51,4,2,500,5000.00,4900.00,'new','2022-12-11 07:23:25','system',NULL),(52,3,2,40,4000.00,3500.00,'failed','2022-12-12 07:54:59','system',NULL),(53,1,2,65,6500.00,5500.00,'new','2022-12-12 08:17:48','system',NULL),(54,1,2,65,6500.00,5500.00,'new','2022-12-12 08:18:54','system',NULL),(55,1,2,65,6500.00,5500.00,'new','2022-12-12 08:19:54','system',NULL),(56,1,2,65,6500.00,5500.00,'new','2022-12-12 08:23:55','system',NULL),(57,2,3,80,8000.00,7000.00,'new','2022-12-12 08:30:31','system',NULL),(58,4,2,77,7700.00,6600.00,'failed','2022-12-12 08:36:12','system',NULL),(59,3,2,56,5600.00,4800.00,'new','2022-12-12 09:04:48','system',NULL),(60,7,7,3,300.00,269.99,'new','2022-12-12 21:57:37','system',NULL),(61,5,6,33,3300.00,2269.99,'new','2022-12-12 22:28:06','system',NULL);
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-12-12 16:03:16
